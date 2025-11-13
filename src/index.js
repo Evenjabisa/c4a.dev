@@ -4,8 +4,7 @@ import "./index.css";
 import Home from "./pages/home";
 import HTML from "./pages/html";
 import Css from "./pages/css";
-import Javascript from "./pages/javascript";
-
+import Javascript from "./pages/javascript"; 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -30,7 +29,6 @@ const router = createBrowserRouter([
 
 const root = createRoot(document.getElementById("root"));
 
-// تشغيل الراوتر
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
