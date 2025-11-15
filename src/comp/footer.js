@@ -1,9 +1,10 @@
 import React from "react";
+import './Footer.css'
 
 const Footer = () => {
   return (
     <div>
-      <footer>
+      <footer className="Adel">
         Designed and developed by Courses4Arab.com <span>💗</span>
       </footer>
     </div>
