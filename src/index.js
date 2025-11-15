@@ -1,10 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Home from "./pages/home";
-import HTML from "./pages/html";
-import Css from "./pages/css";
-import Javascript from "./pages/javascript"; 
+import Home from "./pages/Home";
+import HTML from "./pages/Html";
+import Css from "./pages/Css";
+import Javascript from "./pages/Javascript"; 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -14,15 +14,15 @@ const router = createBrowserRouter([
     errorElement: <h1>Error 404 - Page Not Found</h1>,
   },
   {
-    path: "/html",
+    path: "/Html",
     element: <HTML />,
   },
   {
-    path: "/css",
+    path: "/Css",
     element: <Css />,
   },
   {
-    path: "/javascript",
+    path: "/Javascript",
     element: <Javascript />,
   },
 ]);

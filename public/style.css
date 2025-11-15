@@ -73,7 +73,8 @@ h1 {
   padding: 8px 15px;
 }
 
-.main-link:hover {
+.main-link:hover,
+.main-link.active {
   color: cyan;
   box-shadow: 0 0 5px cyan;
   border-radius: 5px;
@@ -143,11 +144,10 @@ h1 {
   display: block;
 }
 
-
 /* ==================
     2. main & footer
 ===================== */
-main{
+main {
   color: #1b1b1b;
 
   height: calc(100vh - 128.64px);
@@ -159,11 +159,11 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   text-align: center;
 }
 
-footer{
+footer {
   background-color: #1b1b1b;
 
   padding: 20px 0;

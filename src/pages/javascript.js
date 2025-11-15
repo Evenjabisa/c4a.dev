@@ -1,13 +1,15 @@
 import React from "react";
-import Header from "../comp/header";
-import Footer from "../comp/footer";
+import Header from "../comp/Header";
+import Footer from "../comp/Footer";
+import MainContent from "../comp/MainContent";
+
 
 const Javascript = () => {
   return (
     <>
       <Header />
 
-      <main>Javascript page</main>
+      <MainContent pageName="JavaScript Page" />
 
       <Footer />
     </>
