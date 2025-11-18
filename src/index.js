@@ -4,8 +4,9 @@ import "./index.css";
 import Home from "./pages/Home";
 import HTML from "./pages/Html";
 import Css from "./pages/Css";
-import Javascript from "./pages/Javascript"; 
+import Javascript from "./pages/Javascript";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,8 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>
 );

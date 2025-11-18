@@ -1,4 +1,6 @@
-
+.myheader.Adel{
+  background-color: teal;
+}
 .hide-when-mobile {
   display: flex;
   justify-content: space-around;
