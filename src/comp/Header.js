@@ -16,17 +16,17 @@ const Header = () => {
               HTML
             </NavLink>
 
-            {/* <ul className="sub-ul">
+            <ul className="sub-ul">
               <li>
-                <a href="#">Full Course</a>
+                <NavLink to="/html">Full Course</NavLink>
               </li>
               <li>
-                <a href="#">Crash Course</a>
+                <NavLink href="#">Crash Course</NavLink>
               </li>
               <li>
-                <a href="#">Learn in 1h</a>
+                <NavLink href="#">Learn in 1h</NavLink>
               </li>
-            </ul> */}
+            </ul>
           </li>
 
           <li className="main-list">
@@ -34,45 +34,45 @@ const Header = () => {
               CSS
             </NavLink>
 
-            {/* <ul className="sub-ul">
+            <ul className="sub-ul">
               <li>
-                <a href="#">Full Course</a>
+                <NavLink to='/css'>Full Course</NavLink>
               </li>
               <li>
-                <a href="#">CSS Examples</a>
+                <NavLink href="#">CSS Examples</NavLink>
               </li>
 
               <li className="mini-projects">
-                <a href="#">Mini Projects&nbsp;+</a>
+                <NavLink href="#">Mini Projects&nbsp;+</NavLink>
                 <ul className="sub-sub-ul">
                   <li>
-                    <a href="#">Project 1</a>
+                    <NavLink href="#">Project 1</NavLink>
                   </li>
                   <li>
-                    <a href="#">Project 2</a>
+                    <NavLink href="#">Project 2</NavLink>
                   </li>
                   <li>
-                    <a href="#">Project 3</a>
+                    <NavLink href="#">Project 3</NavLink>
                   </li>
                 </ul>
               </li>
-            </ul> */}
+            </ul>
           </li>
 
           <li className="main-list">
             <NavLink className="main-link" to="/Javascript">
               JavaScript
             </NavLink>
-            {/* <ul className="sub-ul sub-of-js">
+            <ul className="sub-ul sub-of-js">
               <li>
-                <a href="#">Coming soon 🔥</a>
+                <NavLink href="#">Coming soon 🔥</NavLink>
               </li>
-            </ul> */}
+            </ul>
           </li>
         </ul>
       </header>
 
-      <header    className="show-when-mobile">
+      <header className="show-when-mobile Adel">
         <h1>
           <Link to="/">C4a.dev</Link>
         </h1>
@@ -92,13 +92,13 @@ const Header = () => {
 
             <ul className="sub-div">
               <li>
-                <a href="#">Full Course</a>
+                <NavLink href="#">Full Course</NavLink>
               </li>
               <li>
-                <a href="#">Crash Course</a>
+                <NavLink href="#">Crash Course</NavLink>
               </li>
               <li>
-                <a href="#">Learn in 1h</a>
+                <NavLink href="#">Learn in 1h</NavLink>
               </li>
             </ul>
           </div>
@@ -111,10 +111,10 @@ const Header = () => {
 
             <ul className="sub-div">
               <li>
-                <a href="#">Full Course</a>
+                <NavLink href="#">Full Course</NavLink>
               </li>
               <li>
-                <a href="#">CSS Examples</a>
+                <NavLink href="#">CSS Examples</NavLink>
               </li>
 
               <li>
@@ -125,13 +125,13 @@ const Header = () => {
 
                 <ul className="sub-sub-div">
                   <li>
-                    <a href="#">Project 1</a>
+                    <NavLink href="#">Project 1</NavLink>
                   </li>
                   <li>
-                    <a href="#">Project 2</a>
+                    <NavLink href="#">Project 2</NavLink>
                   </li>
                   <li>
-                    <a href="#">Project 3</a>
+                    <NavLink href="#">Project 3</NavLink>
                   </li>
                 </ul>
               </li>
@@ -146,7 +146,7 @@ const Header = () => {
 
             <ul className="sub-div">
               <li>
-                <a href="#">Coming soon 🔥</a>
+                <NavLink href="#">Coming soon 🔥</NavLink>
               </li>
             </ul>
           </div>
