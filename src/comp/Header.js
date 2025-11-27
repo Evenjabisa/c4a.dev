@@ -1,18 +1,31 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
+import "../theme.css";
+// level II
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Header = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <div className="myheader">
       <header className="hide-when-mobile Adel">
         <h1>
           <Link to="/">C4a.dev</Link>
         </h1>
-
+        <button
+          onClick={() => {
+            toggleTheme(theme === "Light" ? "Dark" : "Light");
+          }}
+          className="theme-btn"
+        >
+          {theme}
+        </button>
         <ul className="flex">
           <li className="main-list">
-            <NavLink className="main-link" to="/Html">
+            <NavLink className="main-link" to="/html">
               HTML
             </NavLink>
 
@@ -21,51 +34,51 @@ const Header = () => {
                 <NavLink to="/html">Full Course</NavLink>
               </li>
               <li>
-                <NavLink href="#">Crash Course</NavLink>
+                <NavLink to="#">Crash Course</NavLink>
               </li>
               <li>
-                <NavLink href="#">Learn in 1h</NavLink>
+                <NavLink to="#">Learn in 1h</NavLink>
               </li>
             </ul>
           </li>
 
           <li className="main-list">
-            <NavLink className="main-link" to="/Css">
+            <NavLink className="main-link" to="/css">
               CSS
             </NavLink>
 
             <ul className="sub-ul">
               <li>
-                <NavLink to='/css'>Full Course</NavLink>
+                <NavLink to="/css">Full Course</NavLink>
               </li>
               <li>
-                <NavLink href="#">CSS Examples</NavLink>
+                <NavLink to="#">CSS Examples</NavLink>
               </li>
 
               <li className="mini-projects">
-                <NavLink href="#">Mini Projects&nbsp;+</NavLink>
+                <NavLink to="#">Mini Projects&nbsp;+</NavLink>
                 <ul className="sub-sub-ul">
                   <li>
-                    <NavLink href="#">Project 1</NavLink>
+                    <NavLink to="#">Project 1</NavLink>
                   </li>
                   <li>
-                    <NavLink href="#">Project 2</NavLink>
+                    <NavLink to="#">Project 2</NavLink>
                   </li>
                   <li>
-                    <NavLink href="#">Project 3</NavLink>
+                    <NavLink to="#">Project 3</NavLink>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
 
-          <li className="main-list">
-            <NavLink className="main-link" to="/Javascript">
+          <li className="main-list" >
+            <NavLink className="main-link" to="/javascript">
               JavaScript
             </NavLink>
             <ul className="sub-ul sub-of-js">
               <li>
-                <NavLink href="#">Coming soon 🔥</NavLink>
+                <NavLink to="#">Coming soon 🔥</NavLink>
               </li>
             </ul>
           </li>
@@ -92,13 +105,13 @@ const Header = () => {
 
             <ul className="sub-div">
               <li>
-                <NavLink href="#">Full Course</NavLink>
+                <NavLink to="/html">Full Course</NavLink>
               </li>
               <li>
-                <NavLink href="#">Crash Course</NavLink>
+                <NavLink to="#">Crash Course</NavLink>
               </li>
               <li>
-                <NavLink href="#">Learn in 1h</NavLink>
+                <NavLink to="#">Learn in 1h</NavLink>
               </li>
             </ul>
           </div>
@@ -111,10 +124,10 @@ const Header = () => {
 
             <ul className="sub-div">
               <li>
-                <NavLink href="#">Full Course</NavLink>
+                <NavLink to="/css">Full Course</NavLink>
               </li>
               <li>
-                <NavLink href="#">CSS Examples</NavLink>
+                <NavLink to="#">CSS Examples</NavLink>
               </li>
 
               <li>
@@ -125,13 +138,13 @@ const Header = () => {
 
                 <ul className="sub-sub-div">
                   <li>
-                    <NavLink href="#">Project 1</NavLink>
+                    <NavLink to="#">Project 1</NavLink>
                   </li>
                   <li>
-                    <NavLink href="#">Project 2</NavLink>
+                    <NavLink to="#">Project 2</NavLink>
                   </li>
                   <li>
-                    <NavLink href="#">Project 3</NavLink>
+                    <NavLink to="#">Project 3</NavLink>
                   </li>
                 </ul>
               </li>
@@ -146,7 +159,7 @@ const Header = () => {
 
             <ul className="sub-div">
               <li>
-                <NavLink href="#">Coming soon 🔥</NavLink>
+                <NavLink to="/javascript">Coming soon 🔥</NavLink>
               </li>
             </ul>
           </div>

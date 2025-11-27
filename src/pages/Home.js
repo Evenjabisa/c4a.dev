@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../comp/Header";
 import Footer from "../comp/Footer";
 import MainContent from "../comp/MainContent";
@@ -8,11 +7,14 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home Page</title>
-        <meta name="description" content="Hoooooooooooooome" />
+        <title>HOME Page</title>
+        <meta name="description" content="HOMEEEEEEEEEEEE" />
       </Helmet>
+
       <Header />
-      <MainContent pageName="HOME" designer="Adel" />
+
+      <MainContent pageName="HOME Page" />
+
       <Footer />
     </>
   );
