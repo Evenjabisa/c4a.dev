@@ -35,6 +35,16 @@ const Header = () => {
           }}
           className="fa-solid fa-sun"
         ></i>
+        <li className="main-list">
+          <NavLink className="main-link" to="/Signin">
+            Sign In
+          </NavLink>
+        </li>
+        <li className="main-list">
+          <NavLink className="main-link" to="/Signup">
+            Sign Up
+          </NavLink>
+        </li>
 
         <ul className="flex">
           <li className="main-list">
@@ -51,36 +61,6 @@ const Header = () => {
               </li>
               <li>
                 <NavLink to="#">Learn in 1h</NavLink>
-              </li>
-            </ul>
-          </li>
-
-          <li className="main-list">
-            <NavLink className="main-link" to="/css">
-              CSS
-            </NavLink>
-
-            <ul className="sub-ul">
-              <li>
-                <NavLink to="/css">Full Course</NavLink>
-              </li>
-              <li>
-                <NavLink to="#">CSS Examples</NavLink>
-              </li>
-
-              <li className="mini-projects">
-                <NavLink to="#">Mini Projects&nbsp;+</NavLink>
-                <ul className="sub-sub-ul">
-                  <li>
-                    <NavLink to="#">Project 1</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="#">Project 2</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="#">Project 3</NavLink>
-                  </li>
-                </ul>
               </li>
             </ul>
           </li>

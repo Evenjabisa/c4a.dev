@@ -6,8 +6,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //level II
 import { useContext } from "react";
 import ThemeContext from "./context/ThemeContext";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
+
 
 const router = createBrowserRouter([
+  {
+    path: "/signin",
+    element: <Signin />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
   {
     path: "/",
     element: <Home />,
@@ -29,7 +40,7 @@ const router = createBrowserRouter([
 
 function App() {
   const { theme } = useContext(ThemeContext);
-   
+
   return (
     <div className={`${theme}`}>
       <RouterProvider router={router} />;

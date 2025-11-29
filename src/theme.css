@@ -48,7 +48,7 @@ Icon (sun/moon)..
 .fa-solid:hover {
   font-size: 22px;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 .Light .fa-sun {
   display: none;
