@@ -29,7 +29,7 @@ const router = createBrowserRouter([
 
 function App() {
   const { theme } = useContext(ThemeContext);
-
+   
   return (
     <div className={`${theme}`}>
       <RouterProvider router={router} />;

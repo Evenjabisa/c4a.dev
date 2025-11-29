@@ -15,14 +15,27 @@ const Header = () => {
         <h1>
           <Link to="/">C4a.dev</Link>
         </h1>
-        <button
+        {/* <button
           onClick={() => {
             toggleTheme(theme === "Light" ? "Dark" : "Light");
           }}
           className="theme-btn"
         >
           {theme}
-        </button>
+        </button> */}
+        <i
+          onClick={() => {
+            toggleTheme(theme === "Light" ? "Dark" : "Light");
+          }}
+          className="fa-solid fa-moon"
+        ></i>
+        <i
+          onClick={() => {
+            toggleTheme(theme === "Light" ? "Dark" : "Light");
+          }}
+          className="fa-solid fa-sun"
+        ></i>
+
         <ul className="flex">
           <li className="main-list">
             <NavLink className="main-link" to="/html">
@@ -72,7 +85,7 @@ const Header = () => {
             </ul>
           </li>
 
-          <li className="main-list" >
+          <li className="main-list">
             <NavLink className="main-link" to="/javascript">
               JavaScript
             </NavLink>

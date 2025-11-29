@@ -1,7 +1,13 @@
 import { createContext, useReducer } from "react";
 const ThemeContexttt = createContext();
 
-const initialData = { theme: "Light" };
+const initialData = {
+  theme:
+    localStorage.getItem("myTheme") === null
+      ? { myTheme: "light" }
+      : localStorage.getItem("myTheme"),
+};
+
 const reducer = (firstState, action) => {
   switch (action.type) {
     case "CHANGE_THEME":
@@ -13,7 +19,9 @@ const reducer = (firstState, action) => {
 
 export function ThemeProvider({ children }) {
   const [firstState, dispatch] = useReducer(reducer, initialData);
+
   const toggleTheme = (newName) => {
+    localStorage.setItem("myTheme", newName);
     dispatch({ type: "CHANGE_THEME", newValue: newName });
   };
 

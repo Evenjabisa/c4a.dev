@@ -39,3 +39,26 @@
 .Dark .Adel {
   background-color: rgba(17, 17, 17, 0.885) !important;
 }
+/* ==============
+Icon (sun/moon)..
+=================*/
+.fa-solid {
+  font-size: 20px;
+}
+.fa-solid:hover {
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.Light .fa-sun {
+  display: none;
+}
+.fa-sun {
+  color: #f39c12;
+}
+.fa-moon {
+  color: #242424;
+}
+.Dark .fa-moon {
+  display: none;
+}
