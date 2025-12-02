@@ -5,24 +5,30 @@ import "../theme.css";
 // level II
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/config.js";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className="myheader">
+      {user && <h3> Doneeeeeeeee</h3>}
       <header className="hide-when-mobile Adel">
         <h1>
           <Link to="/">C4a.dev</Link>
         </h1>
         {/* <button
-          onClick={() => {
-            toggleTheme(theme === "Light" ? "Dark" : "Light");
-          }}
-          className="theme-btn"
-        >
-          {theme}
-        </button> */}
+            onClick={() => {
+              toggleTheme(theme === "Light" ? "Dark" : "Light");
+            }}
+            className="theme-btn"
+          >
+            {theme}
+          </button> */}
         <i
           onClick={() => {
             toggleTheme(theme === "Light" ? "Dark" : "Light");
@@ -35,16 +41,36 @@ const Header = () => {
           }}
           className="fa-solid fa-sun"
         ></i>
-        <li className="main-list">
-          <NavLink className="main-link" to="/Signin">
-            Sign In
-          </NavLink>
-        </li>
-        <li className="main-list">
-          <NavLink className="main-link" to="/Signup">
-            Sign Up
-          </NavLink>
-        </li>
+        {!user && (
+          <li className="main-list">
+            <NavLink className="main-link" to="/Signin">
+              Sign In
+            </NavLink>
+          </li>
+        )}
+        {!user && (
+          <li className="main-list">
+            <NavLink className="main-link" to="/Signup">
+              Sign Up
+            </NavLink>
+          </li>
+        )}
+        {user && (
+          <li
+            onClick={() => {
+              signOut(auth)
+                .then(() => {
+                  console.log("Sign-out successful.");
+                })
+                .catch((error) => {
+                  // An error happened.
+                });
+            }}
+            className="main-list"
+          >
+            <NavLink className="main-link">Sign-Out</NavLink>
+          </li>
+        )}
 
         <ul className="flex">
           <li className="main-list">

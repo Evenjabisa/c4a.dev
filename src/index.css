@@ -6,23 +6,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.Light {
+  color: #000;
+  background-color: #ffffff;
+}
+
+.Dark {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
 
 * {
   margin: 0;
   padding: 0;
-  color: white;
-
+  /* color: white; */
   font-family: sans-serif;
-
   text-decoration: none;
   list-style: none;
-
   letter-spacing: 1px;
 }
 
 html {
   box-sizing: border-box;
   background-color: #f2f2f2;
+}
+p, h1, h2, h3, input, button {
+  color: inherit;
 }
 
 *,
@@ -33,6 +42,7 @@ html {
 
 header {
   background-color: #1b1b1b;
+  color: white;
 }
 
 h1 {
@@ -61,6 +71,7 @@ button {
   padding: 10px;
   font-size: 16px;
   background-color: #4caf50;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;

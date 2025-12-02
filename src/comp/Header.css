@@ -1,10 +1,15 @@
+header,
+header * {
+  color: white;
+}
+
 .myheader.Adel {
   background-color: teal;
 }
 .hide-when-mobile {
   display: flex;
   justify-content: space-around;
-  align-items: center
+  align-items: center;
 }
 /* ==================
     3. header of mobile
