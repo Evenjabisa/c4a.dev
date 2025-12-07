@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <div className="myheader">
-      {user && <h3> Doneeeeeeeee</h3>}
+      {/* {user && <h3> Doneeeeeeeee</h3>} */}
       <header className="hide-when-mobile Adel">
         <h1>
           <Link to="/">C4a.dev</Link>
@@ -73,34 +73,37 @@ const Header = () => {
         )}
 
         <ul className="flex">
-          <li className="main-list">
-            <NavLink className="main-link" to="/html">
-              HTML
-            </NavLink>
+          {user && (
+            <li className="main-list">
+              <NavLink className="main-link" to="/html">
+                HTML
+              </NavLink>
 
-            <ul className="sub-ul">
-              <li>
-                <NavLink to="/html">Full Course</NavLink>
-              </li>
-              <li>
-                <NavLink to="#">Crash Course</NavLink>
-              </li>
-              <li>
-                <NavLink to="#">Learn in 1h</NavLink>
-              </li>
-            </ul>
-          </li>
-
-          <li className="main-list">
-            <NavLink className="main-link" to="/javascript">
-              JavaScript
-            </NavLink>
-            <ul className="sub-ul sub-of-js">
-              <li>
-                <NavLink to="#">Coming soon 🔥</NavLink>
-              </li>
-            </ul>
-          </li>
+              <ul className="sub-ul">
+                <li>
+                  <NavLink to="/html">Full Course</NavLink>
+                </li>
+                <li>
+                  <NavLink to="#">Crash Course</NavLink>
+                </li>
+                <li>
+                  <NavLink to="#">Learn in 1h</NavLink>
+                </li>
+              </ul>
+            </li>
+          )}
+          {user && (
+            <li className="main-list">
+              <NavLink className="main-link" to="/javascript">
+                JavaScript 
+              </NavLink>
+              <ul className="sub-ul sub-of-js">
+                <li>
+                  <NavLink to="#">Coming soon 🔥</NavLink>
+                </li>
+              </ul>
+            </li>
+          )}
         </ul>
       </header>
 
